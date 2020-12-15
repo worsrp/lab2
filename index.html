@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+        #t01 table, th, td {
+          border: 1px solid black;
+          padding: 5px;
+        }
+        #t01 table {
+          border-spacing: 15px;
+        }
+        nav {
+         float: left;
+         width: 20%;
+         background: white;
+         padding: 20px;
+        }
+        /* Style the list inside the menu */
+        nav ul {
+         list-style-type: none;
+         padding: 0;
+        }
+        article {
+         float: left;
+         padding: 20px;
+         width: 70%;
+         background-color:white;
+        }
+        /* Clear floats after the columns */
+        section:after {
+         content: "";
+         display: table;
+         clear: both;
+        }       
+        @media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+        </style>
+    <title>Sirapop's Web Page</title>
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <td> <a href="homepage.html"><p style="text-align:center;"> Home </p></a> </td>
+            <td> <a href="gallery.html"><p style="text-align:center;"> Gallery </p></a> </td>
+            <td> <a href="gpa.html"><p style="text-align:center;"> GPA Calculator </p></a> </td>
+            <td> <a href="contact.html"><p style="text-align:center;"> Contact </p></a> </td>
+        </tr> 
+    </table>
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <section>
+                <article>
+                <h2>Sirapop Para</h2>
+                <p>Computer engineering student</p>
+                <p>sirapop_p@cmu.ac.th</p>
+                <p>(+66)88-5717587</p>
+                </article>
+                <nav>
+                <img style = "float: right;" width="150px" height="150px" src="profile.jpg" alt="profile pic">
+                </nav>
+                </section>
+            </td>
+        </tr>
+     </table>
+     <table style="width: 100%">
+        <tr>
+            <td>
+                <section>
+                <nav>
+                        <h3>Profile</h3> 
+                </nav>
+                <article>
+                    <p>A random computer engineering student, who's trying to graduate in 4 years.</p>
+                </article>
+                </section>
+                <section>
+                    <nav>
+                            <h3>Skill</h3> 
+                    </nav>
+                    <article>
+                        <p>Game Design and Art Work</p>
+                    </article>
+                </section>
+                <section>
+                    <nav>
+                            <h3>Technical</h3> 
+                    </nav>
+                    <article>
+                        <p>C++ Java Photoshop illustrator</p>
+                    </article>
+                </section>
+                <section>
+                    <nav>
+                            <h3>Education</h3> 
+                    </nav>
+                    <article>
+                        <p><b>now</b> - Bachelor of Computer engineering, CMU</p>
+                    </article>
+                </section>
+            </td>
+        </tr>
+     </table>
+</body>
+</html>
+

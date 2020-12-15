@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <style>
+     * {
+        box-sizing: border-box;
+    }
+
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+    }
+        #t01 table, th, td {
+          border: 1px solid black;
+          padding: 5px;
+        }
+        #t01 table {
+          border-spacing: 15px;
+        }
+        nav {
+         float: left;
+         width: 50%;
+         padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+         list-style-type: none;
+         padding: 0;
+        }
+        article {
+         float: left;
+         padding: 20px;
+         width: 50%;
+         background-color:darkgray;
+        }
+        /* Clear floats after the columns */
+        section:after {
+         content: "";
+         display: table;
+         clear: both;
+        }       
+        @media (max-width: 600px) {
+        nav, article {
+            width: 100%;    
+            height: auto;
+            }
+        }
+        .sty1 {
+            background: white;
+        }
+        .sty2{
+            background:lightgray;
+        }
+        </style>
+        <script src="todo.js">
+        </script>
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <td> <a href="homepage.html"><p style="text-align:center;"> Home </p></a> </td>
+            <td> <a href="gallery.html"><p style="text-align:center;"> Gallery </p></a> </td>
+            <td> <a href="gpa.html"><p style="text-align:center;"> GPA Calculator </p></a> </td>
+            <td> <a href="contact.html"><p style="text-align:center;"> Contact </p></a> </td>
+        </tr> 
+    </table>
+    
+    <table style="width: 100%">
+        <tr>
+            <h1>Class Information</h1>
+            <td>
+                <h1>Add a new class</h1>
+                        <form action="/action_page.php" id="form1">
+                        <p>  <label for="name">Name:</label>
+                            <input id="name" type="text"><br></p>
+                        <p> <label for="semester">Semester: </label>
+                            <select id="semester" name="semester">
+                                <option value="0">1/2019</option>
+                                <option value="1">2/2019</option>
+                                <option value="2">1/2020</option>
+                                <option value="3">2/2020</option>
+                                <option value="4">1/2021</option>
+                                <option value="5">2/2021</option>
+                                <option value="6">1/2022</option>
+                                <option value="7">2/2022</option>
+                                </select></p>
+                         <p> <label for="gpa">GPA: </label>
+                            <select id="gpa" name="gpa">
+                            <option value="4.0" key="1">A</option>
+                            <option value="3.5">B+</option>
+                            <option value="3.0">B</option>
+                            <option value="2.5">C+</option>
+                            <option value="2.0">C</option>
+                            <option value="1.5">D+</option>
+                            <option value="1">D</option>
+                            <option value="0">F</option>
+                            </select></p>
+                        <p> <label for="credit">Credit: </label>
+                            <select id="credit" name="credit">
+                            <option value="1.0">1.0</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2.0">2.0</option>
+                            <option value="2.5">2.5</option>
+                            <option value="3.0">3.0</option>
+                            </select></p>
+                        <input type="submit" value="Add">
+                    </form> 
+            </td>
+            <td>
+                <h1>GPA Calculator</h1>
+                <p>
+                <form action="/action_page.php" id="form2">
+                    <label for="GPA">GPA Calculator: </label>
+                    <select id="gpax" name="gpax">
+                    <option value="1">GPAX</option>
+                    <option value="2">Major</option>
+                    </select>
+                    <input type="submit" value="Calculate">
+                </form>
+                </p>
+                <p>
+                <form action="/action_page.php" id="form3">
+                    <label for="GPA-sem">Semester GPA : </label>
+                    <select id="gpax-sem" name="gpax-sem">
+                        <option value="0">1/2019</option>
+                        <option value="1">2/2019</option>
+                        <option value="2">1/2020</option>
+                        <option value="3">2/2020</option>
+                        <option value="4">1/2021</option>
+                        <option value="5">2/2021</option>
+                        <option value="6">1/2022</option>
+                        <option value="7">2/2022</option>
+                    </select>
+                    <input type="submit" value="Calculate">
+                </form>
+                </p>
+                <label id="calc" name ="calc"></label>
+
+            </td>
+        </tr>
+    </table>
+    <h1>Added Class</h1>
+    <section>
+    <nav class="sty1">
+    <table>
+        <b>1/2019</b>
+        <tbody id = "1/2019">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </nav>  
+    <nav class="sty2">
+    <table>
+        <b>2/2019</b>
+        <tbody id = "2/2019">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </article>
+    </section>
+    <section>
+    <nav class="sty2">
+    <table>
+        <b>1/2020</b>
+        <tbody id = "1/2020">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </nav>
+    <nav class="sty1">
+    <table>
+        <b>2/2020</b>
+        <tbody id = "2/2020">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </nav>
+    </section>
+    <section>
+    <nav class="sty1">
+    <table>
+        <b>1/2021</b>
+        <tbody id = "1/2021">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </nav>
+    <nav class="sty2">
+    <table>
+        <b>2/2021</b>
+        <tbody id = "2/2021">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </nav>
+    </section>
+    <section>
+    <nav class="sty2">
+    <table>
+        <b>1/2022</b>
+        <tbody id = "1/2022">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </nav>
+    <nav class="sty1">
+    <table>
+        <b>2/2022</b>
+        <tbody id = "2/2022">
+            <tr>
+                <td>Class</td>
+                <td>GPA</td>
+                <td>Credit</td>
+            </tr>
+        </tbody>
+    </table>
+    </nav>  
+    </section>
+</body>
+</html>
